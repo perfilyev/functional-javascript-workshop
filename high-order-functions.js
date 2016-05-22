@@ -1,6 +1,3 @@
-function repeat(operation, num) {
-  if (num <= 0) return null;
-  operation();
-  return repeat(operation, num - 1);
-}
-module.exports = repeat;
+ const repeat = (operation, num) => num <= 0 ? null : operation() || repeat(operation, num - 1);
+ module.exports = repeat;
+
